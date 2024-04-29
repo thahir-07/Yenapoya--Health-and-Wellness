@@ -10,12 +10,14 @@ const ChatAuth = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post('https://mindance-api.onrender.com/chat/authenticate', { username })
+      
+      .post('https://mindance-api.onrender.com/chat/authenticate', {headers:{"PRIVATE_KEY": "f072e3e5-f320-422b-a16b-b5eef7a698c8"}},{ username })
       .then((r) => {
+        console.log(r)
         props.onAuth({ ...r.data, secret: username });
         window.localStorage.setItem('chat_user', r.data.username);
       }) // NOTE: over-ride secret
-      .catch((e) => console.log(JSON.stringify(e.response.data)));
+      .catch((e) => {console.log(JSON.stringify(e.response))});
   };
 
   return (

@@ -2,7 +2,7 @@ import { ChatEngine } from 'react-chat-engine';
 import '../assets/css/ChatWindow.css';
 
 const ChatWindow = (props) => {
-  const CHAT_ENGINE_PROJECT_ID = 'a5cdc135-5d8e-4274-9f9a-3524c56696ae';
+  const CHAT_ENGINE_PROJECT_ID = '0bc62ded-0733-4ebc-a61b-60347c21c87c';
 
   return (
     <div>

@@ -3,7 +3,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes, FaUser, FaBook } from "react-icons/fa";
-import Logo from "../assets/images/butterfly.png";
+import Logo from "../assets/images/Logo.png";
 import "../assets/css/Navbar.css";
 
 export const Navbar = () => {
@@ -32,7 +32,7 @@ export const Navbar = () => {
       <Link to={!cookies.access_token ? "/" : "/home"}>
         <h1>
           <img className="image" src={Logo} alt="" />
-          {" "}Mindance
+          {" "}Fit Hub
         </h1>
       </Link>
       <div className="navbar" ref={navRef}>

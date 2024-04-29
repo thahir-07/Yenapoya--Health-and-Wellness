@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import Logo from '../assets/images/butterfly.png';
+import Logo from '../assets/images/Logo.png';
 import '../assets/css/AuthForm.css';
 
 export const Signup = () => {
@@ -14,7 +14,7 @@ export const Signup = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('https://mindance-api.onrender.com/auth/signup',
+      await axios.post('http://localhost:5001/auth/signup',
       {
         email,
         username,
@@ -31,7 +31,7 @@ export const Signup = () => {
       <form onSubmit={handleSubmit}>
         <div className="logo-holder">
           <img className="logo-image" src={Logo} alt="Mindance-Butterfly-Logo" />
-          <h2 className="logo-text">Mindance</h2>
+          <h2 className="logo-text">Fit Hub</h2>
         </div>
         <div className="auth-form">
           <label className="auth-form-label" htmlFor="email">Email</label>

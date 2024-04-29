@@ -31,7 +31,7 @@ const DetailsForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post('https://mindance-api.onrender.com/details',
+      await axios.post('http://localhost:5001/details',
       { ...detailsFormData },
       { headers: { authorization: cookies.access_token } });
       alert('Details submitted!');

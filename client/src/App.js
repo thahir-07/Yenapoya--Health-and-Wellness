@@ -29,6 +29,7 @@ function App() {
             <Route path='/ediary' element={<EDiary />} />
           </Route>
           <Route path='/chat' element={<ListenerChat />} />
+          <Route path="/exercise" />
         </Routes>
       </Router>
     </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useCookies } from 'react-cookie';
 import { useNavigate } from "react-router-dom";
-import Logo from '../assets/images/butterfly.png';
+import Logo from '../assets/images/Logo.png';
 import Show from '../assets/images/visibility_white_filled.svg';
 import Hide from '../assets/images/visibility_off_white_filled.svg';
 import '../assets/css/AuthForm.css';
@@ -19,7 +19,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://mindance-api.onrender.com/auth/login', {
+      const response = await axios.post('http://localhost:5001/auth/login', {
         username,
         password
       });
@@ -42,8 +42,8 @@ const Login = () => {
     <div className="form-child-container">
       <form onSubmit={handleSubmit}>
         <div className="logo-holder">
-          <img className="logo-image" src={Logo} alt="Mindance-Butterfly-Logo" />
-          <h2 className="logo-text">Mindance</h2>
+          <img className="logo-image" src={Logo} alt="Fit Hub" />
+          <h2 className="logo-text">Fit Hub</h2>
         </div>
         <div className="auth-form">
           <label className="auth-form-label" htmlFor="email-or-username">Email or Username</label>
