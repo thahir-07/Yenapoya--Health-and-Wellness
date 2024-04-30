@@ -7,7 +7,10 @@ import Details from './pages/Details';
 import { Navbar } from './components/Navbar';
 import ListenerChat from './pages/ListenerChat';
 import EDiary from './pages/EDiary';
-
+import ExerciseHome from './pages/ExerciseHome';
+import { Fragment } from 'react';
+import './App.css'
+import ExerciseDetail from './pages/ExerciseDetail';
 function App() {
   return (
     <div className="App">
@@ -18,10 +21,10 @@ function App() {
           <Route path='/details' element={<Details />} />
           <Route
             element={
-              <>
+              <Fragment>
                 <Navbar />
                 <Outlet />
-              </>
+              </Fragment>
             }
           >
             <Route path='/' element={<Landing />} />
@@ -29,7 +32,8 @@ function App() {
             <Route path='/ediary' element={<EDiary />} />
           </Route>
           <Route path='/chat' element={<ListenerChat />} />
-          <Route path="/exercise" />
+          <Route path='/exercise' element={<ExerciseHome/>} />
+          <Route path="/exercise/:id" element={<Fragment><Navbar/> <ExerciseDetail/></Fragment>} />
         </Routes>
       </Router>
     </div>

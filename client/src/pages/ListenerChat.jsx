@@ -3,13 +3,9 @@ import ChatAuth from "../components/ChatAuth";
 import ChatWindow from "../components/ChatWindow";
 
 const ListenerChat = () => {
-  const [user, setUser] = useState(undefined);
-
-  if (!user) {
-    return <ChatAuth onAuth={(user) => setUser(user)} />
-  } else {
+  const [user, setUser] = useState({username:"thahir", secret: "123456"});
     return <ChatWindow user={user} />
-  }
+  
 };
 
 export default ListenerChat;
